@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Density-based Spatial Clustering of Applications With Noise (DBSCAN)
+  p  
+  div 
+    code POST host/api/v1/dbscan/radius/minPts
+  ul
+    li radius: Search radius
+    li minPts: Minimum number of points to form a cluster
+  p The POST body should be 2D array of X Y coodinates as JSON
+  p result is JSON with two properties
+  ul
+    li clusters: array of clusters. Each element contains array of point indices
+    li noise: index of points identified as noise
+
+  img(src="images/example.png")
+  p
+  a(href="https://github.com/abarth500/density-clustering-kdtree-doping") Source
+  
+
